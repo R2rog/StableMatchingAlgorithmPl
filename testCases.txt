@@ -1,0 +1,87 @@
+Copyright (C) 2018  Arturo Guevara Chávez.
+
+Instructions: Copy one of the knowledge bases into the top of the SMA.pl code.
+When you run it on the terminal copy and paste the line below Testing example.
+For example:
+To run Test case 1 you should add the knowledge base to SMA.pl.
+Then once it's loaded on terminal, run it with the instruction: stable_matching([mark,rob],[lisa,mary],[])
+%Knowledge base Test case 1.===================================================
+choice(rob,lisa,1).
+choice(rob,mary,2).
+choice(mark,lisa,1).
+choice(mark,mary,2).
+choice(lisa,rob,1).
+choice(lisa,mark,2).
+choice(mary,mark,1).
+choice(mary,rob,2).
+
+%Testing Example1:
+stable_matching([mark,rob],[lisa,mary],[])
+Expected result:(mark,mary),(rob,lisa)
+Demonstration: On the final document.
+
+%Knowledge base Test 2==========================================================
+choice(ryan,lizzy,1).
+choice(ryan,sarah,2).
+choice(ryan,zoey,3).
+choice(ryan,daniela,4).
+choice(josh,sarah,1).
+choice(josh,lizzy,2).
+choice(josh,daniela,3).
+choice(josh,zoey,4).
+choice(blake,sarah,1).
+choice(blake,daniela,2).
+choice(blake,zoey,3).
+choice(blake,lizzy,4).
+choice(connor,lizzy,1).
+choice(connor,sarah,2).
+choice(connor,zoey,3).
+choice(connor,daniela,4).
+
+choice(lizzy,ryan,1).
+choice(lizzy,blake,2).
+choice(lizzy,josh,3).
+choice(lizzy,connor,4).
+choice(sarah,ryan,1).
+choice(sarah,blake,2).
+choice(sarah,connor,3).
+choice(sarah,josh,4).
+choice(zoey,connor,1).
+choice(zoey,josh,2).
+choice(zoey,ryan,3).
+choice(zoey,blake,4).
+choice(daniela,ryan,1).
+choice(daniela,josh,2).
+choice(daniela,connor,3).
+choice(daniela,blake,4).
+
+%Testing Example2:
+stable_matching([ryan,josh,blake,connor],[lizzy,sarah,zoey,daniela],[])
+Expected results: (josh,daniela),(connor,zoey),(blake,sarah),(ryan,lizzy).
+Demonstration:https://www.youtube.com/watch?v=FhRf0j068ZA&t=1955s
+
+%Knowledge base Test 3==========================================================
+choice(albert,diane,1).
+choice(albert,emily,2).
+choice(albert,fergie,3).
+choice(bradley,emily,1).
+choice(bradley,diane,2).
+choice(bradley,fergie,3).
+choice(charles,diane,1).
+choice(charles,emily,2).
+choice(charles,fergie,3).
+
+choice(diane,bradley,1).
+choice(diane,albert,2).
+choice(diane,charles,3).
+choice(emily,albert,1).
+choice(emily,bradley,2).
+choice(emily,charles,3).
+choice(fergie,albert,1).
+choice(fergie,bradley,2).
+choice(fergie,charles,3).
+
+Testing Example3:
+stable_matching([albert,bradley,charles],[diane,emily,fergie],[])
+Expected result: albert-diane, bradley-emily, charles-fergie
+Demonstration: http://www.cs.cmu.edu/~arielpro/15896s16/slides/896s16-16.pdf
